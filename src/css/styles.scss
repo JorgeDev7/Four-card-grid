@@ -1,0 +1,169 @@
+$red: #ea5353;
+$cyan: #45d3d3;
+$orange: #fcaf4a;
+$blue: #549ef2;
+
+$veryDarkBlue: #4d4f61;
+$grayishBlue: #a3a5ae;
+$veryLightGray: #fafafa;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: $veryLightGray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 7rem 0;
+
+    &__heading,
+    &__text {
+        text-align: center;
+    }
+
+    &__heading {
+        font-weight: 200;
+        font-size: 2.5rem;
+        color: $veryDarkBlue;
+        line-height: 1.4;
+        padding-bottom: 1.5rem;
+
+        @media (min-width: 768px) {
+            font-size: 4rem;
+        }
+    }
+
+    &__span {
+        display: block;
+        font-weight: 600;
+    }
+
+    &__text {
+        width: 30rem;
+        margin: 0 auto;
+        color: $grayishBlue;
+        font-size: 1.5rem;
+
+        @media (min-width: 768px) {
+            width: 60rem;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        padding: 3rem 2rem;
+        border-radius: .5rem;
+
+        &__heading {
+            font-size: 1.8rem;
+            color: $veryDarkBlue;
+            padding: 0 0 1rem 0;
+
+            @media (min-width: 768px) {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.3rem;
+            color: $grayishBlue;
+            padding-bottom: 3rem;
+            line-height: 1.8;
+
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__img {
+            width: 7rem;
+            align-self: flex-end;
+        }
+    }
+
+    .supervisor {
+        border-top: 4px solid $cyan;
+
+        @media (min-width: 1200px) {
+            margin-top: 13rem;
+            margin-bottom: -13rem;
+        }
+    }
+
+    .team-builder {
+        border-top: 4px solid $red;
+    }
+
+    .karma {
+        border-top: 4px solid $orange;
+
+        @media (min-width: 1200px) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+    }
+
+    .calculator {
+        border-top: 4px solid $blue;
+
+        @media (min-width: 1200px) {
+            margin-top: 13rem;
+            margin-bottom: -13rem;
+        }
+    }
+}
